@@ -1,0 +1,12 @@
+
+.card {
+    float: left;
+    margin-right: 25px;
+    align-items: center;
+    margin-top: 25px;
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.2); 
+}

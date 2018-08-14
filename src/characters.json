@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Robber",
+        "image":
+            "http://geekandsundry.com/wp-content/uploads/2017/02/Robber.png",
+        "clicked": false
+        },
+    {
+        "id": 2,
+        "name": "Marksman",
+        "image":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRGOhHMPV901ZovwfnS-hnjIUNu0YnRQrf2DwYnzuRe_NMWZB6",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Diseased",
+        "image":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA8Ocatb4Ihoti7hBdV4CTqFvcJX8CCRUytlokm0R5WM-2BthG",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Doppelganger",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/doppelganger_2048x.png?v=1454937146",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Copycat",
+        "image":
+            "http://onenightultimate.com/wp-content/uploads/2016/09/copycat_1024x1024.png",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Witch",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/witch_2048x.png?v=1454937146",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Troublemakers",
+        "image":
+            "http://geekandsundry.com/wp-content/uploads/2016/09/trouble.png",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Cupid",
+        "image":
+            "http://onenightultimate.com/wp-content/uploads/2016/09/cupid_1024x1024.png",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Cupid",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/insomniac_2048x.png?v=1454937146",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Paranormal Investigator",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/pi_2048x.png?v=1454937146",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Pickpocket",
+        "image":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0-aDaSx-XmiFQVrqA9MqxVvJ7adN6cj9ZtUUYDT9I9Q5Pnl-K",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Assassin",
+        "image":
+            "http://onenightultimate.com/wp-content/uploads/2016/09/assassin_1024x1024.png",
+        "clicked": false
+    },
+    {
+        "id": 13,
+        "name": "Mystic Wolf",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/mystic-wolf_2048x.png?v=1454937146",
+        "clicked": false
+    },
+    {
+        "id": 14,
+        "name": "Curator",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/curator_2048x.png?v=1454937146",
+        "clicked": false
+    },
+    {
+        "id": 15,
+        "name": "Rascal",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/rascal_2048x.png?v=1512674475",
+        "clicked": false
+    },
+    {
+        "id": 16,
+        "name": "Instigator",
+        "image":
+            "https://cdn.shopify.com/s/files/1/0740/4855/products/instigator_2048x.png?v=1454937146",
+        "clicked": false
+    }
+]
