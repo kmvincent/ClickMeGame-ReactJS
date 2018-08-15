@@ -15,8 +15,10 @@ const Hero = props => (
             One Night Werewolf Clicky Game
         </h1>
         <h2 className="subtitle">
-            {props.message}
+            Click on an image to earn points, but don't click on any more than once!    
         </h2>
+        <h2> Score: {props.score} | Top Score: {props.topScore}</h2>
+        <h2>{props.message}</h2> 
         </div>
     </div>
 </section>

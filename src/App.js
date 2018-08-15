@@ -1,42 +1,29 @@
 import React, { Component } from "react";
 import CharacterCard from "./components/CharacterCard";
-import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Wrapper from "./components/Wrapper";
 import characters from "./characters.json"
 
+
 class App extends Component {
   state = {
-    message: "Click on an image to earn points, but don't click on any more than once!",
+    message: "",
     characters: characters,
     score: 0,
     topScore: 0
   }
 
   updateScore = () => {
-    this.setState({score: this.state.score + 1 });
-  };
+    this.setState((newState) => ({
+      score: newState.score + 1
+    }),
+      () => this.winGame());
+  }
 
   newtopScore = () => {
     this.setState((newState) => ({topScore: newState.score
     }))
   }
-
-  // winGame = () => {
-
-  // }
-
-  // resetGame = () => {
-
-  // }
-
-  // handleShuffle = () => {
-
-  // }
-
-  // handleRender = () => {
-
-  // }
 
   winGame = () => {
     if (this.state.score == this.state.characters.length) {
@@ -51,36 +38,33 @@ class App extends Component {
 
   resetGame = () => {
     this.setState({ score: 0 });
-    this.state.characters.forEach((character) => {
-      character.clicked = false;
-    this.setState({message: "Click on an image to earn points, but don't click on any more than once!"})
+    this.state.characters.forEach((image) => {
+      image.clicked = false;
     })
   }
 
-  handleShuffle = (array) => {
-    let shuffleArr = [], n = array.length, i;
-    while (n) {
-      i = Math.floor(Math.random() * array.length);
-      if (i in array) {
-        shuffleArr.push(array[i]);
-        delete array[i];
-        n--;
-      }
-    }
-    this.setState({ characters: shuffleArr})
+  handleShuffle = () => {
+    let shuffledCharacters = this.state.characters;
+    for (let i = shuffledCharacters.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [shuffledCharacters[i], shuffledCharacters[j]] = [shuffledCharacters[j], shuffledCharacters[i]];
+        }
+    this.setState({characters: shuffledCharacters})
   }
 
   randomRender = id => {
-    this.state.characters.forEach((character) => {
-      if (character.id === id) {
-        if (character.clicked) {
+    this.state.characters.forEach((image) => {
+      console.log(image.id)
+      if (image.id === id) {
+        if (image.clicked) {
           this.setState({message: "You clicked on the same card twice!  You lost!"});
+          this.setState({})
           this.resetGame();
           return false;
         }
         else {
           this.updateScore();
-          character.clicked = true;
+          image.clicked = true;
           this.setState({message: "You guessed correctly!"})
         }
         if (this.state.score >= this.state.topScore) {
@@ -93,8 +77,11 @@ class App extends Component {
 
   render = () => (
     <Wrapper>
-      <NavBar score={this.state.score} topScore={this.state.topScore}/>
-      <Hero message={this.state.message}/>
+      <Hero 
+      message={this.state.message}
+      score={this.state.score} 
+      topScore={this.state.topScore}
+      />
       <div class="container is-centered">
       {characters.map ((characters) => (
         <CharacterCard
@@ -103,7 +90,8 @@ class App extends Component {
         id={characters.id}
 
         randomRender={this.randomRender}
-        randomOrganize={() => this.handleShuffle(this.state.characters)}
+        // randomOrganize={() => this.handleShuffle(this.state.characters)}
+        handleShuffle={this.handleShuffle}
         />
       ))}
       </div>
